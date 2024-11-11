@@ -1,0 +1,16 @@
+.chart-container {
+  background-color: #ffffff; /* White background for charts */
+  padding: 20px;
+  border-radius: 12px; /* Round corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* Increased minimum height for charts */
+}
+
+canvas {
+  width: 100% !important; /* Allow canvas to take full width */
+  height: 400px !important; /* Increased height for consistency */
+  max-height: 500px; /* Maximum height to prevent overcrowding */
+}

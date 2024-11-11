@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Manrope' !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: none;
+  cursor: pointer;
+  height: 4px;
+}
+
+/* Set thumb color (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb  {
+  background-color: #161618B2;
+  border-radius: 2px;
+}
+
+.header_gradient{
+    background: linear-gradient(90.29deg, rgba(9, 10, 12, 0.02) 11.9%, rgba(7, 7, 9, 0.02) 76.85%) !important;
+}
+
+.hero_heading{
+    background: linear-gradient(92.36deg, rgba(227, 230, 237, 0.85) 30.66%, rgba(117, 129, 164, 0.6) 99.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.clip-torch {
+    clip-path: polygon(99% 4%, 95% 45%, 80% 42%, 95% 90%, 66% 69%, 49% 100%, 0 1%);
+}
+
+.review_class{
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, darkblue, darkorchid) border-box;
+border-radius: 50em;
+border: 4px solid transparent;
+}
+
+.scroll-reveal  span {
+  color: hsl(0 0% 100% / 0.8);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, white, white);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+
+.scroll-reveal p span {
+  animation-range-start:  contain 180vh;
+  animation-range-end:  contain 200vh;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.card_wrapper {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90.29deg, rgba(20, 22, 26, 0.95) 7.39%, rgba(11, 12, 14, 0.8) 96.23%);
+  transform: translateX(3.87px) translateY(-5.41542px) translateZ(0px);
+}
+
+.card_wrapper::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+}
+
+.card_wrapper span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #616063, #d1d4da);
+  animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+      transform: translateX(-100%);
+  }
+
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+.card_wrapper span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, #adbbff, #adbbff);
+  animation: animate2 5s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+  0% {
+      transform: translateY(-100%);
+  }
+
+  100% {
+      transform: translateY(100%);
+  }
+}
+
+.card_wrapper span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #adbbff, #adbbff);
+  animation: animate3 5s linear infinite;
+}
+
+@keyframes animate3 {
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.card_wrapper span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to top, #adbbff, #adbbff);
+  animation: animate4 5s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate4 {
+  0% {
+      transform: translateY(100%);
+  }
+
+  100% {
+      transform: translateY(-100%);
+  }
+}
+
+  
