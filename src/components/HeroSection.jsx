@@ -20,7 +20,7 @@ const HeroSection = ({domain, setDomain, isLoading, getBusinessData}) => {
         className="flex w-full max-w-2xl rounded-full pl-1 pr-2 py-1.5 sm:mt-5"
       >
         <input
-          type="text"
+          type="url"
           placeholder="https://www.example.com"
           className="flex-grow bg-transparent text-white px-4 outline-none"
           value={domain}

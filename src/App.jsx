@@ -27,6 +27,7 @@ import { toast } from "react-toastify";
 import "react-loading-skeleton/dist/skeleton.css";
 import LoadingIndicator from "./components/LoadingIndicator";
 import Footer from "./components/Footer";
+import { formatUrl } from "./utils/format-url";
 
 function App() {
   const [businessResponse, setBusinessResponse] = useState();
@@ -98,7 +99,7 @@ function App() {
     try {
       setIsLoading(true);
       const response = await postBusinessData({
-        domain,
+        domain: formatUrl(domain),
         stats_type: "business",
       });
       console.log(response, " response");
