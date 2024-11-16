@@ -10,7 +10,7 @@ import CtaCardsSection from "./components/CtaCardsSection";
 import ParagraphSection from "./components/ParagraphSection";
 import CommunityCta from "./components/CommunityCta";
 import HowItWorks from "./components/HowItWorks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { businessData } from "./utils/business-data";
 import {
   convertForLineChart,
@@ -28,6 +28,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import LoadingIndicator from "./components/LoadingIndicator";
 import Footer from "./components/Footer";
 import { formatUrl } from "./utils/format-url";
+import { hotjar } from 'react-hotjar'
 
 function App() {
   const [businessResponse, setBusinessResponse] = useState();
@@ -43,6 +44,10 @@ function App() {
     insights_exist: false,
   });
   const [waitlistForm, setWaitlistForm] = useState({ name: "", email: "" });
+
+  useEffect(() => {
+    hotjar.initialize({id: 5183256, sv:6})
+  }, [])
 
   const handleChangeWaitlist = (e) => {
     const { name, value } = e.target;
