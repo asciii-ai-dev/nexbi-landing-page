@@ -2,11 +2,6 @@ export const formatUrl = (inputUrl) => {
     try {
         // Add a scheme if missing
         let url = new URL(inputUrl.includes("://") ? inputUrl : `https://${inputUrl}`);
-        
-        // Ensure the hostname starts with "www."
-        if (!url.hostname.startsWith("www.")) {
-          url.hostname = `www.${url.hostname}`;
-        }
     
         // Remove any trailing slashes except for the root path
         url.pathname = url.pathname === "/" ? "/" : url.pathname.replace(/\/+$/, "");

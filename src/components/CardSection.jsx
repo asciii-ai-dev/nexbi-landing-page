@@ -81,7 +81,7 @@ const CardSection = ({ positives, opportunities, isLoading }) => {
                 }}
               />
             ) : (
-              !expandOpportunities ? opportunities?.slice(0,240)+"..." : opportunities || ""
+              !expandOpportunities && opportunities?.length > 240 ?   opportunities?.slice(0,240)+"..." : opportunities || ""
             )}
           </p>
           <button onClick={() => setExpandOpportunities(!expandOpportunities)} disabled={isLoading} className="disabled:cursor-not-allowed disabled:opacity-40 flex items-center gap-1.5 font-[600] text-[#1482FF]">

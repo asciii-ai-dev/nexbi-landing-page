@@ -213,8 +213,10 @@ function App() {
                   businessResponse?.business_insights?.insights_data?.positives
                 }
                 opportunities={
-                  businessResponse?.business_insights?.insights_data
-                    ?.opportunities
+                 typeof businessResponse?.business_insights?.insights_data
+                 ?.opportunities === "string" ? businessResponse?.business_insights?.insights_data
+                    ?.opportunities : businessResponse?.business_insights?.insights_data
+                    ?.opportunities?.opportunities
                 }
               />
               <ActionableSteps
