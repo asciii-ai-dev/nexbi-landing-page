@@ -16,6 +16,7 @@ const ParagraphSection = () => {
 
   return (
     <div className="max-w-[600px]">
+      
       {isSafari ? (
         <>
           <p

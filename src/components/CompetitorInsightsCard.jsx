@@ -13,13 +13,13 @@ const CompetitorInsightsCard = ({
   return (
     <div
       style={{ backgroundImage: `url(${CardBg})` }}
-      className="flex bg-cover items-center justify-center w-full !my-10"
+      className="flex bg-cover items-center justify-center w-full !my-10 "
     >
       <div className="relative py-6 px-8 card_wrapper rounded-[28px] max-w-md text-center text-white shadow-lg overflow-hidden">
-        <h4 className="hero_heading py-4 text-4xl text-center !font-extrabold">
+        <h4 style={{fontFamily:"Manrope"}} className="hero_heading py-4 text-4xl text-center !font-extrabold">
           Unlock Deep Competitor Insights
         </h4>
-        <p className="text-[16px] font-[400] opacity-75 text-[#FFFFFFBF] mb-7 mt-4 ">
+        <p className="text-[15px] font-[400] opacity-75 text-[#FFFFFFBF] mb-7 mt-4 ">
           Analyze what your competitor is doing to rank higher. We'll identify
           the resources they’re using and provide details on how you can also
           appear there.

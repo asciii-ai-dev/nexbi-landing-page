@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { IoPlayOutline } from "react-icons/io5";
 import CustomModal from "./CustomModal";
 import AiAgentImg from "../assets/ai_agent_img.svg"
 // import SetGoalsImg from "../assets/set_goals_img.svg"
@@ -34,7 +33,7 @@ const HowItWorks = () => {
   const [videoModal, setVideoModal] = useState(false);
 
   useEffect(() => {
-    const intervalDuration = 5000; // 5 seconds total for each step
+    const intervalDuration = 8000; // 5 seconds total for each step
     const updateInterval = 50; // Update progress every 50ms for smoothness
     const increment = (100 * updateInterval) / intervalDuration; // Calculate progress increment per update
 
@@ -84,7 +83,7 @@ const HowItWorks = () => {
                 key={index}
                 className="mb-10 cursor-pointer"
               >
-                <h3
+                    <h3
                   className={`text-lg text-[22px] duration-200 transition-all ${
                     index === currentStep
                       ? "text-white text-[20px]"
@@ -93,6 +92,7 @@ const HowItWorks = () => {
                 >
                   {step.title}
                 </h3>
+                
                 {index === currentStep && (
                   <p className="text-xs mt-3 text-white text-opacity-40">
                     {step.description}

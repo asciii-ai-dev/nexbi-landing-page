@@ -33,6 +33,13 @@ html {
   background-clip: text;
 }
 
+.how_clip_text{
+  background: llinear-gradient(90.47deg, #008FF8 2.89%, #DF51DB 36.7%, #F43E64 70.52%, #F6520C 99.51%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
 .clip-torch {
     clip-path: polygon(99% 4%, 95% 45%, 80% 42%, 95% 90%, 66% 69%, 49% 100%, 0 1%);
 }
@@ -161,5 +168,38 @@ border: 4px solid transparent;
       transform: translateY(-100%);
   }
 }
+
+@keyframes boxShadowRevolve {
+  0% {
+    box-shadow: -4px 1px 13px -5px #f43e64, 
+                2px 1px 13px -4px #df51db, 
+                -3px -1px 14px -4px #0091fa;
+  }
+  25% {
+    box-shadow: 1px 4px 13px -5px #f43e64, 
+                3px 2px 13px -4px #df51db, 
+                -1px -3px 14px -4px #0091fa;
+  }
+  50% {
+    box-shadow: 4px -1px 13px -5px #f43e64, 
+                -2px -1px 13px -4px #df51db, 
+                3px 1px 14px -4px #0091fa;
+  }
+  75% {
+    box-shadow: -1px -4px 13px -5px #f43e64, 
+                -3px -2px 13px -4px #df51db, 
+                1px 3px 14px -4px #0091fa;
+  }
+  100% {
+    box-shadow: -4px 1px 13px -5px #f43e64, 
+                2px 1px 13px -4px #df51db, 
+                -3px -1px 14px -4px #0091fa;
+  }
+}
+
+.animate-boxShadow {
+  animation: boxShadowRevolve 2s infinite linear;
+}
+
 
   

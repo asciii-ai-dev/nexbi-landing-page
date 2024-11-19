@@ -1,4 +1,3 @@
-import { FaPlus } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
 import KeywordsIcon from "../assets/keywords_icon.svg"
 import OnlinePresenceIcon from "../assets/onlinepresence_icon.svg"
@@ -22,10 +21,6 @@ const ActionableSteps = ({ actionableTasks, isLoading }) => {
           <h3 className="text-[22px] font-[600] text-white">
             Actionable Steps
           </h3>
-          <button disabled={isLoading} className="disabled:cursor-not-allowed disabled:opacity-40 flex items-center gap-1.5 font-[600] text-[#1482FF]">
-            <p>Learn More</p>
-            <FaPlus size={13} color={"#1482FF"} />
-          </button>
         </div>
         <div className="flex justify-center items-center  pt-10">
           {isLoading ? (
@@ -67,7 +62,7 @@ const ActionableSteps = ({ actionableTasks, isLoading }) => {
             <div className="flex flex-row gap-6 justify-start items-center max-w-full hover:scrollbar-default scrollbar-hide overflow-x-auto">
               {actionableTasks &&
                 actionableTasks.map((v, i) => (
-                  <div className="max-w-[300px] flex-shrink-0" key={i}>
+                  <div className="max-w-[280px] flex-shrink-0" key={i}>
                     <div className="bg-[#FFFFFF0D] mb-2 w-[57px] h-[55px] flex items-center justify-center rounded-xl">
                       {/* <FiLink color={"#FFFFFFBF"} size={28} /> */}
                       <img 

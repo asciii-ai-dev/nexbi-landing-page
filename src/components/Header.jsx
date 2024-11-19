@@ -28,7 +28,7 @@ const Header = () => {
       className="fixed !z-50 top-6 left-1/2 transform -translate-x-1/2 max-w-4xl w-full flex justify-between items-center px-4 py-2.5 text-white rounded-full border border-[#FFFFFF08] transition-all duration-300 ease-in-out"
       style={{
         background: isScrolled
-          ? "#060809" // Hex background when scrolled
+          ? "linear-gradient(90.29deg, rgba(9, 10, 12, 0.7) 41.9%, rgba(7, 7, 9, 0.7) 65%)" // Hex background when scrolled
           : "linear-gradient(90.29deg, rgba(9, 10, 12, 0.02) 11.9%, rgba(7, 7, 9, 0.02) 76.85%)", // Linear gradient when at the top
       }}
     >
@@ -37,7 +37,7 @@ const Header = () => {
         <a href="#" className="hover:text-gray-400">Home</a>
         <a href="#how_it_works" className="text-[#F7F8F8] opacity-[0.45]">How it works</a>
       </nav>
-      <a href="#waitlist" className="bg-[#FFFFFF1A] text-md px-5 py-2.5 rounded-full">
+      <a href="#waitlist" className="bg-[#FFFFFF] opacity-100 text-[#2F3031] text-md px-5 py-2.5 rounded-full">
         Join the waitlist
       </a>
     </header>

@@ -20,6 +20,11 @@ ChartJS.register(
   Legend
 );
 
+const months = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
 // ChartComponent
 const KeywordsStats = ({ chartData }) => {
   // Early return if chartData is missing
@@ -83,10 +88,31 @@ const KeywordsStats = ({ chartData }) => {
           },
         },
       },
+      // x: {
+      //   barPercentage: 0.5,
+      //   categoryPercentage: 0.5,
+        
+      // },
       x: {
         barPercentage: 0.5,
         categoryPercentage: 0.5,
+        ticks: {
+          callback: function (value, index, values) {
+            // Map the numeric value to the corresponding label in data.labels
+            const dateLabel = this.getLabelForValue(value); // This fetches the date string (MM-YYYY)
+            console.log("Date Label:", dateLabel); // Log the date label to see the raw value
+      
+            // Split the label into month and year
+            const [month, year] = dateLabel.split("-");
+            console.log("Month-Year split:", month, year); // Check the split result
+            const monthNumber = parseInt(month); 
+            
+            // Extract and return the short month name (e.g., "Jan", "Feb")
+            return  months[monthNumber - 1];
+          },
+        },
       },
+      
     },
   };
 
