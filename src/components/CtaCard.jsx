@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 const CtaCard = () => {
   return (
     <div
-      className="rounded-[32px] h-auto p-10 md:h-[220px] md:py-24 px-6 flex flex-col  justify-center items-center"
+      className="rounded-[32px] h-auto p-10 md:h-[220px] md:py-24 px-6 flex flex-col opacity-100  justify-center items-center"
       style={{
         background:
           "linear-gradient(113.56deg, #00BAF8 2.03%, #333FFF 45.26%, #9933FF 98.1%)",

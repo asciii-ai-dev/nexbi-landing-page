@@ -1,6 +1,7 @@
 import CtaCard from './CtaCard'
 
 const CtaCardsSection = ({businessResponse}) => {
+   
   return (
     <>
     <div className="flex justify-center">
@@ -20,18 +21,18 @@ const CtaCardsSection = ({businessResponse}) => {
     {
       !businessResponse ? (
          <div className="absolute inset-0 w-full h-[600px]">
-         <div className="absolute top-[39%] left-[34%] w-[330px]">
+         <div className="absolute top-[39%] left-[34%] z-10 w-[330px]">
               <CtaCard />
               </div>
-         <div className="absolute top-0 left-0 w-full h-1/4 bg-[#060809] opacity-70 blur-lg"></div>
-         <div className="absolute top-0 left-0 w-1/4 h-full bg-[#060809] opacity-50 blur-lg"></div>
-         <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[#060809] opacity-50 blur-lg"></div>
-         <div className="absolute top-0 right-0 w-1/4 h-full bg-[#060809] opacity-50 blur-lg"></div>
+         <div className="absolute top-0 left-0 w-full h-1/4 bg-[#060809] z-20 opacity-70 blur-lg"></div>
+         <div className="absolute top-0 left-0 w-1/4 h-full bg-[#060809] z-20 opacity-50 blur-lg"></div>
+         <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[#060809] z-20 opacity-50 blur-lg"></div>
+         <div className="absolute top-0 right-0 w-1/4 h-full bg-[#060809] z-20 opacity-50 blur-lg"></div>
        </div>
       ) : null
     }
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
-        <div className="flex flex-col gap-4">
+        <div className={`flex flex-col gap-4 ${businessResponse ?? "animate-scroll"}`}>
          <div className='bg-[#FFFFFF0D] rounded-3xl hidden md:flex p-6'>
             <p className='text-white text-sm text-opacity-60'>
            {" Competitor’s Trustpilot rating of 3.7, with more one-star than five-star reviews, indicates dissatisfaction in customer support and content quality. This presents an opportunity for your business to strengthen these areas, potentially attracting users seeking better service and reliable content. Additionally, by addressing link quality issues such as reducing 'nofollow' links and exploring underutilized platforms like news sites and message boards, your business can enhance its backlink profile and improve search rankings."}
@@ -48,7 +49,7 @@ const CtaCardsSection = ({businessResponse}) => {
             </p>
          </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className={`flex flex-col gap-4 ${businessResponse ?? "animate-scroll-reverse"}`}>
         <div className='bg-[#FFFFFF0D] rounded-3xl hidden md:flex p-6'>
             <p className='text-white text-sm text-opacity-60'>
             Your recent Facebook ad campaign generated 1.2M impressions which is 1.5 times more than the last campaign. The major contribution came from the age group between 24 and 32 while the top geographic location was the Middle East. Focusing on targeted copy and narrowing demographics could further improve the results.            </p>
@@ -65,7 +66,7 @@ const CtaCardsSection = ({businessResponse}) => {
             </p>
          </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className={`flex flex-col gap-4 ${businessResponse ?? "animate-scroll"}`}>
         <div className='bg-[#FFFFFF0D] rounded-3xl hidden md:flex p-6'>
             <p className='text-white text-sm text-opacity-60'>
             Opportunities lie in optimizing improved keywords to regain lost traffic, addressing broken backlinks, and expanding backlinks from high-authority platforms to boost visibility and rankings. Based on the competitor’s brand profile, there are 25 potential resources that could list your business. 

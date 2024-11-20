@@ -33,12 +33,13 @@ html {
   background-clip: text;
 }
 
-.how_clip_text{
-  background: llinear-gradient(90.47deg, #008FF8 2.89%, #DF51DB 36.7%, #F43E64 70.52%, #F6520C 99.51%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+.how_clip_text {
+  background: linear-gradient(90.47deg, #008FF8 2.89%, #DF51DB 36.7%, #F43E64 70.52%, #F6520C 99.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 
 .clip-torch {
     clip-path: polygon(99% 4%, 95% 45%, 80% 42%, 95% 90%, 66% 69%, 49% 100%, 0 1%);
@@ -201,5 +202,42 @@ border: 4px solid transparent;
   animation: boxShadowRevolve 2s infinite linear;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+  scroll-behavior: smooth;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 10s linear infinite;
+  scroll-behavior: smooth;
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 
   

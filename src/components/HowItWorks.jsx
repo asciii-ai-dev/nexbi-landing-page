@@ -1,30 +1,38 @@
 import { useState, useEffect } from "react";
 import CustomModal from "./CustomModal";
-import AiAgentImg from "../assets/ai_agent_img.svg"
+import AiAgentImg from "../assets/ai_agent_img.svg";
 // import SetGoalsImg from "../assets/set_goals_img.svg"
-import IntegrateBusinessImg from "../assets/integrate_business_img.svg"
-import AskImg from "../assets/ask_img.svg"
-import IdentifyOpporImg from "../assets/identify_oppor_img.svg"
+import IntegrateBusinessImg from "../assets/integrate_business_img.svg";
+import AskImg from "../assets/ask_img.svg";
+import IdentifyOpporImg from "../assets/identify_oppor_img.svg";
 
 const steps = [
   {
     title: "Integrate your business data",
     description:
       "Power up the business intelligence engine by connecting all your data sources seamlessly with a click.",
-    img: IntegrateBusinessImg
-    },
-  { title: "Set your goals", description: "Define what you want to achieve.", img: AskImg },
+    img: IntegrateBusinessImg,
+  },
+  {
+    title: "Set your goals",
+    description: "Define what you want to achieve.",
+    img: AskImg,
+  },
   {
     title: "We identify opportunities for you",
     description: "Our AI finds growth opportunities.",
-    img: IdentifyOpporImg
+    img: IdentifyOpporImg,
   },
   {
     title: "AI agents carry out the tasks",
     description: "Automated execution of tasks.",
-    img: AiAgentImg
+    img: AiAgentImg,
   },
-  { title: "Ask whatever you want!", description: "Get insights on-demand.", img: AskImg },
+  {
+    title: "Ask whatever you want!",
+    description: "Get insights on-demand.",
+    img: AskImg,
+  },
 ];
 
 const HowItWorks = () => {
@@ -83,16 +91,30 @@ const HowItWorks = () => {
                 key={index}
                 className="mb-10 cursor-pointer"
               >
-                    <h3
-                  className={`text-lg text-[22px] duration-200 transition-all ${
-                    index === currentStep
-                      ? "text-white text-[20px]"
-                      : "text-white text-opacity-10"
-                  }`}
-                >
-                  {step.title}
-                </h3>
-                
+                {index === steps.length - 1 ? (
+                  <h3
+                    className={`text-lg text-[22px] duration-200 transition-all how_clip_text text-opacity-100 
+                      ${
+                        index === currentStep
+                          ? "text-[20px]"
+                          : "opacity-25"
+                      }
+                      `}
+                  >
+                    {step.title} sasa
+                  </h3>
+                ) : (
+                  <h3
+                    className={`text-lg text-[22px] duration-200 transition-all ${
+                      index === currentStep
+                        ? "text-white text-[20px]"
+                        : "text-white text-opacity-10"
+                    }`}
+                  >
+                    {step.title}
+                  </h3>
+                )}
+
                 {index === currentStep && (
                   <p className="text-xs mt-3 text-white text-opacity-40">
                     {step.description}
@@ -117,7 +139,7 @@ const HowItWorks = () => {
             ))}
           </div>
 
-          {/* Right Side: Icons */ }
+          {/* Right Side: Icons */}
           <div className="flex-1 flex justify-center items-center">
             <img
               alt="steps_illustration"
