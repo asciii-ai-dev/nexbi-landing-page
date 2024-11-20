@@ -73,7 +73,7 @@ const BarComponent = ({
               </>
                 )}
               </div>
-            ) : heading === "Traffic & Impressions" ? (
+            ) : heading === "Traffic" ? (
               <div>
                 {
                   isCompetitors ? (
@@ -104,7 +104,7 @@ const BarComponent = ({
               </div>
             ) : null}
           </div>
-          <ChartComponent chartData={chartData} />
+          <ChartComponent chartData={chartData} isCompetitors={isCompetitors} />
         </div>
       </div>
     </div>

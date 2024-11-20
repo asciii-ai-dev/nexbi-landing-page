@@ -26,7 +26,7 @@ const months = [
 ];
 
 // ChartComponent
-const KeywordsStats = ({ chartData }) => {
+const KeywordsStats = ({ chartData, isCompetitors }) => {
   // Early return if chartData is missing
   if (!chartData) return;
 
@@ -52,7 +52,7 @@ const KeywordsStats = ({ chartData }) => {
     datasets: metricLabels.map((label, index) => ({
       label: label.charAt(0).toUpperCase() + label.slice(1),
       data: sortedData[label],
-      backgroundColor: index === 0 ? '#23B649' : index === 1 ? '#DF9B34' : '#088F8F',
+      backgroundColor: index === 0 ? '#23B649' : index === 1 ? '#DF9B34' : !isCompetitors ? '#DC3948' : '#088F8F',
     })),
   };
 

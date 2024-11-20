@@ -101,7 +101,7 @@ const HowItWorks = () => {
                       }
                       `}
                   >
-                    {step.title} sasa
+                    {step.title}
                   </h3>
                 ) : (
                   <h3

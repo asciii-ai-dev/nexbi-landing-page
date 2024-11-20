@@ -29,7 +29,7 @@ const StatisticsSection = ({data, selectors}) => {
         </div>
         <div className="flex flex-col gap-4">
         {topRankedKeywords && <TopRankedCard topRankedKeywords={topRankedKeywords} />}
-        <BarComponent isCompetitors={selectors.includes("Business")} heading={"Traffic & Impressions"} chartData={trafficImpressionsData} ChartComponent={KeywordsTraffic} />
+        <BarComponent isCompetitors={selectors.includes("Business")} heading={"Traffic"} chartData={trafficImpressionsData} ChartComponent={KeywordsTraffic} />
         {trustPilotStats && <TopPageCard selectorType={selectorType} data={{trustPilotStats: selectorType === "Business" ? trustPilotStats?.business_rating : trustPilotStats?.competitors_rating[0][selectorType] }} />}
         </div>
       </div>
