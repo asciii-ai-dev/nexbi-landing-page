@@ -26,7 +26,7 @@ ChartJS.register(
 // LineChartComponent
 const KeywordsTraffic = ({ chartData }) => {
   if (!chartData) return null;
-  const colors = [ "#1B76DE","#DE971B","#CD3749"]
+  const colors = [ "#1B76DE","#DE971B","#90EE90"]
 
   // Get keys for dynamic labels
   const firstKey = Object.keys(chartData)[0];

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CustomModal from "./CustomModal";
 import AiAgentImg from "../assets/ai_agent_img.svg";
-// import SetGoalsImg from "../assets/set_goals_img.svg"
+import SetGoalsImg from "../assets/set_goals_img.svg"
 import IntegrateBusinessImg from "../assets/integrate_business_img.svg";
 import AskImg from "../assets/ask_img.svg";
 import IdentifyOpporImg from "../assets/identify_oppor_img.svg";
@@ -16,7 +16,7 @@ const steps = [
   {
     title: "Set your goals",
     description: "Define what you want to achieve.",
-    img: AskImg,
+    img: SetGoalsImg,
   },
   {
     title: "We identify opportunities for you",
@@ -144,7 +144,7 @@ const HowItWorks = () => {
             <img
               alt="steps_illustration"
               src={steps[currentStep]?.img}
-              className="object-cover"
+              className="object-contain w-full max-w-[520px] h-full max-h-[547px]"
             />
           </div>
         </div>
