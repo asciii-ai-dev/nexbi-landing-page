@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import CustomModal from "./CustomModal";
-import AiAgentImg from "../assets/ai_agent_img.svg";
-import SetGoalsImg from "../assets/set_goals_img.svg"
+import AiAgentImg from "../assets/ai_agent_img.png";
+import SetGoalsImg from "../assets/set_goals_img.png"
 import IntegrateBusinessImg from "../assets/integrate_business_img.svg";
-import AskImg from "../assets/ask_img.svg";
-import IdentifyOpporImg from "../assets/identify_oppor_img.svg";
+import AskImg from "../assets/ask_img.png";
+import IdentifyOpporImg from "../assets/identify_oppor_img.png";
 
 const steps = [
   {
@@ -82,7 +82,7 @@ const HowItWorks = () => {
             <p className="text-[14px] text-[#f1f1f1] font-[500]">Watch Video</p>
           </button> */}
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-start bg-[#060809] text-white">
+        <div className="flex flex-col md:gap-10 gap-5 md:flex-row justify-center items-start bg-[#060809] text-white">
           {/* Left Side: Steps */}
           <div className="w-full md:w-1/2 p-6">
             {steps.map((step, index) => (
@@ -144,7 +144,8 @@ const HowItWorks = () => {
             <img
               alt="steps_illustration"
               src={steps[currentStep]?.img}
-              className="object-contain w-full max-w-[520px] h-full max-h-[547px]"
+              className="object-contain w-full max-w-[520px] h-full"
+              style={{maxHeight: currentStep === 0 ? 547 : 450 }}
             />
           </div>
         </div>
