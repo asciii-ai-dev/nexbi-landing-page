@@ -316,12 +316,15 @@ function App() {
               isInsightsAvailable={isInsightsAvailable}
             />
           ) : null}
-          {/* <div
+           {
+            !businessResponse && (
+              <div className="w-full h-full relative">
+              <div
             style={{
               background:
                 "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #060809 100%)",
             }}
-            className="absolute bottom-0 left-0 w-full !bg-red-400"
+            className="absolute bottom-0 left-0 w-full h-[50%] pointer-events-none"
           />
           <div
             id="video"
@@ -330,12 +333,15 @@ function App() {
             <iframe
               width="100%"
               height={"100%"}
-              src="https://www.youtube.com/embed/N45UC2WCwpk?si=YR79KtgPkyZK1nDE"
+              src="https://www.youtube.com/embed/1Fz1q_im5ns?si=33rBvX1l0i5JPNqN"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-          </div> */}
+          </div> 
+              </div>
+            )
+           }
 
           <div className="flex justify-center items-center !my-10 md:!my-20 ">
             <ParagraphSection />

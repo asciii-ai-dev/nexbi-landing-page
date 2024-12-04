@@ -5,6 +5,7 @@ import SetGoalsImg from "../assets/set_goals_img.png"
 import IntegrateBusinessImg from "../assets/integrate_business_img.svg";
 import AskImg from "../assets/ask_img.png";
 import IdentifyOpporImg from "../assets/identify_oppor_img.png";
+import { IoPlayOutline } from "react-icons/io5";
 
 const steps = [
   {
@@ -74,13 +75,13 @@ const HowItWorks = () => {
           <h1 className="text-md md:text-2xl lg:text-3xl text-center text-white font-[600] ">
             How It Works
           </h1>
-          {/* <button
+           <button
             onClick={() => setVideoModal(true)}
             className="flex gap-2 items-center shadow-md border border-[#FFFFFF14] w-fit rounded-full px-4 py-2"
           >
             <IoPlayOutline color="#f1f1f1" size={17} />
             <p className="text-[14px] text-[#f1f1f1] font-[500]">Watch Video</p>
-          </button> */}
+          </button> 
         </div>
         <div className="flex flex-col md:gap-10 gap-5 md:flex-row justify-center items-start bg-[#060809] text-white">
           {/* Left Side: Steps */}
@@ -156,7 +157,7 @@ const HowItWorks = () => {
             className="!mt-10"
             width="100%"
             height={"100%"}
-            src="https://www.youtube.com/embed/N45UC2WCwpk?si=YR79KtgPkyZK1nDE"
+            src="https://www.youtube.com/embed/1Fz1q_im5ns?si=33rBvX1l0i5JPNqN"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
