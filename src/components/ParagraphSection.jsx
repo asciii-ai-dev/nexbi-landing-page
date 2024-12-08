@@ -12,7 +12,7 @@ const ParagraphSection = () => {
     }
   }, []);
 
-  const para = `Running a business is about growth 💹 and not getting lost in data. \n\n NexBI gathers data from the real-time feed generated from multiple integrations your online business is connected to. We turn this stream of complex data into actionable insights and present super-relevant opportunities that are otherwise missed — keeping you at the forefront in your industry 🚀 \n\n Let us transform confusion into clarity and guide your growth. Welcome to the future of Business Intelligence 🌍`;
+  const para = `Running a business is about growth 💹 and not getting lost in data. \n\n NexBI gathers data from the real-time feed generated from multiple integrations your online business is connected to. We turn this stream of complex data into actionable insights and present super-relevant opportunities that would otherwise be missed — keeping you at the forefront in your industry 🚀. \n\n Let us transform confusion into clarity and guide your growth. Welcome to the future of Business Intelligence 🌍`;
 
   return (
     <div className="max-w-[600px]">
@@ -43,8 +43,7 @@ const ParagraphSection = () => {
             NexBI gathers data from the real-time feed generated from multiple
             integrations your online business is connected to. We turn this
             stream of complex data into actionable insights and present
-            super-relevant opportunities that are otherwise missed — keeping
-            your at the forefront in your industry🚀
+            super-relevant opportunities that would otherwise be missed — keeping you at the forefront in your industry 🚀.
           </p>
           <p
             className="mt-4"

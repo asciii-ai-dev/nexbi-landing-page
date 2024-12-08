@@ -7,9 +7,11 @@ const CustomModal = ({ onClose, children, open }) => {
       styles={{
         modal: {
           // minWidth:'250px',
-          width: "550px",
+          width:'93%',
+          maxWidth: "750px",
           background: "#060809",
-          height:"auto"
+          height:"auto",
+          minHeight: "500px"
         },
       }}
       open={open}

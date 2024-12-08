@@ -316,8 +316,7 @@ function App() {
               isInsightsAvailable={isInsightsAvailable}
             />
           ) : null}
-           {
-            !businessResponse && (
+           
               <div className="w-full h-full relative">
               <div
             style={{
@@ -340,8 +339,6 @@ function App() {
             ></iframe>
           </div> 
               </div>
-            )
-           }
 
           <div className="flex justify-center items-center !my-10 md:!my-20 ">
             <ParagraphSection />

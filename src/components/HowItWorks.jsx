@@ -156,7 +156,7 @@ const HowItWorks = () => {
           <iframe
             className="!mt-10"
             width="100%"
-            height={"100%"}
+            height={"400px"}
             src="https://www.youtube.com/embed/1Fz1q_im5ns?si=33rBvX1l0i5JPNqN"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
