@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ReviewSection from "./components/ReviewSection";
 import StatisticsSection from "./components/StatisticsSection";
+import WhyUs from "./components/WhyUs";
 import BgSvg from "./assets/bg-svg.svg";
 import CompetitorInsightsCard from "./components/CompetitorInsightsCard";
 import CtaCardsSection from "./components/CtaCardsSection";
@@ -345,6 +346,9 @@ function App() {
           </div>
           <div className="!my-20">
             <CtaCardsSection businessResponse={businessResponse} />
+          </div>
+          <div className="!my-20">
+          <WhyUs />
           </div>
           <HowItWorks />
         </div>
