@@ -70,6 +70,7 @@ const KeywordsTraffic = ({ chartData }) => {
     barPercentage: 0.8,
     plugins: {
       legend: {
+        align: "start",
         labels: {
           usePointStyle: true,
           pointStyle: 'circle',

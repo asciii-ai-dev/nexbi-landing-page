@@ -61,6 +61,7 @@ const KeywordsStats = ({ chartData, isCompetitors }) => {
     barPercentage: 0.8,
     plugins: {
       legend: {
+        align: "start",
         labels: {
           usePointStyle: true,
           pointStyle: 'circle',

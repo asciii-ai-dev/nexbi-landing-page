@@ -45,6 +45,7 @@ const Header = () => {
         background: isScrolled
           ? "linear-gradient(90.29deg, rgba(9, 10, 12, 0.7) 41.9%, rgba(7, 7, 9, 0.7) 65%)"
           : "linear-gradient(90.29deg, rgba(9, 10, 12, 0.02) 11.9%, rgba(7, 7, 9, 0.02) 76.85%)",
+          backdropFilter: "blur(30px)"
       }}
     >
       <img

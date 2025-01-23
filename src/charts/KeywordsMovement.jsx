@@ -60,6 +60,7 @@ const KeywordsMovement = ({ chartData }) => {
     barPercentage: 0.8,
     plugins: {
       legend: {
+        align: "start",
         labels: {
           usePointStyle: true, // This makes the legend icon a circle
           pointStyle: 'circle', // Specify circle point style explicitly

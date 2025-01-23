@@ -100,6 +100,7 @@ function App() {
   };
 
   const getBusinessData = async () => {
+    if(!domain) return
     setBusinessResponse();
     setCompetitorsData();
     try {

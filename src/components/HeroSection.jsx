@@ -2,6 +2,11 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
 
 const HeroSection = ({ domain, setDomain, isLoading, getBusinessData }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && !isLoading) {
+      getBusinessData();
+    }
+  };
   return (
     <section
       id="hero"
@@ -24,6 +29,7 @@ const HeroSection = ({ domain, setDomain, isLoading, getBusinessData }) => {
           className="flex-grow bg-transparent text-white px-4 outline-none"
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <button
           disabled={isLoading}
