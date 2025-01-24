@@ -47,7 +47,7 @@ const TopRankedCard = ({ topRankedKeywords }) => {
                   href={`${item?.url || "#"}`}
                   target="_blank"
                   className="truncate"
-                  title={item?.url}
+                  title={item?.keyword}
                 >
                   {item?.keyword}
                 </a>
